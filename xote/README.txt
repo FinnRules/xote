@@ -1,0 +1,1 @@
+XOTE is a mod developed by FinnRules with art done by FinnRules and RobinFox. Additional information regarding aspects of the mod can be found at <imgur album link>

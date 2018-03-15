@@ -1,3 +1,4 @@
+--Corn (plant creation)
 farming.register_plant("xote:corn", {
 	description = "Corn Kernel",
 	inventory_image = "xote_corn_seed.png",
@@ -7,20 +8,13 @@ farming.register_plant("xote:corn", {
 	fertility = {"grassland"},
 	groups = {flammable = 4}
 })
+--Corn > Corn Seed
 minetest.register_craft({
 		type = "shapeless",
 		output = 'xote:seed_corn 3',
 		recipe = {"xote:corn"}
 })
---teosinte
---minetest.register_node("xote:teosinte", {
---	drawtype = "plantlike",
---	tiles = {"xote_teosinte"},
---	selection_box = {
---		type = "fixed",
---		fixed = {-6 / 16, -0.5, -6 / 16, 0.5, 6 / 16},
---	},
---})
+--Teosinte 
 minetest.register_node("xote:teosinte", {
     description = "Teosinte",
     drawtype = "plantlike",
@@ -47,11 +41,13 @@ minetest.register_node("xote:teosinte", {
         }
     }
 })
+--Teosinte Seed
 minetest.register_craftitem("xote:seed_teosinte", {
 		description = "Teosinte Seed",
 		inventory_image = "xote_seed_teosinte.png",
 		on_use = minetest.item_eat(1)
 })
+--Teosinte Spawn Code
 minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"default:dirt_with_grass"},
@@ -64,26 +60,31 @@ minetest.register_decoration({
 		y_max = 31000,
 		decoration = "xote:teosinte",
 })
+--Popcorn
 minetest.register_craftitem("xote:popcorn", {
 		description = "Popcorn",
 		inventory_image = "xote_popcorn.png",
 		on_use = minetest.item_eat(3)
 })
+--Popcorn Recipe
 minetest.register_craft({
 		type = "cooking",
 		recipe = "xote:seed_corn",
 		output = "xote:popcorn",
 })
+--Alt Popcorn Recipe
 minetest.register_craft({
 		type = "cooking",
 		recipe = "xote:corn",
 		output = "xote:popcorn 3",
 })
+--Popcorn Bag
 minetest.register_craftitem("xote:popcorn_bag", {
 		description = "Popcorn Bag",
 		inventory_image = "xote_popcorn_bag.png",
 		on_use = minetest.item_eat(12,"default:paper")
 })
+--Popcorn Bag Recipe
 minetest.register_craft({
 		type = "shapeless",
 		output = 'xote:popcorn_bag',

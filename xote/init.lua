@@ -5,7 +5,7 @@
  _/     _/ _/  _/ _/  _/  _/_/   _/  _/ _/ _/         _/
 _/     _/ _/  _/ _/  _/  _/  _/ _/_/_/ _/ _/_/_/ _/_/_/
 <finnrules23@gmail.com> Contact me with issues or if you enjoy the mod!
-XOTE Version 0.8.0
+XOTE Version 0.9.0
 ]]--
 xote = {}
 xote.path = minetest.get_modpath("xote")

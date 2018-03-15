@@ -88,6 +88,23 @@ minetest.register_craftitem("xote:popcorn_bag", {
 minetest.register_craft({
 		type = "shapeless",
 		output = 'xote:popcorn_bag',
-		recipe = {"xote:popcorn", "xote:popcorn", "xote:popcorn", "xote:popcorn", "default:paper"},
-		replacements = {{ 'xote:apple_cider', 'vessels:glass_bottle' }}
+		recipe = {"xote:popcorn", "xote:popcorn", "xote:popcorn", "xote:popcorn", "default:paper"}
 })
+
+--Other Plants
+
+--Hemp
+farming.register_plant("xote:hemp", {
+	description = "Hemp",
+	inventory_image = "xote_hemp_seed.png",
+	steps = 4,
+	minlight = 12,
+	maxlight = default.LIGHT_MAX,
+	fertility = {"grassland"},
+	groups = {flammable = 4}
+})
+--[[Possible uses:
+straps
+bag
+rope
+]]--

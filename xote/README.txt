@@ -1,4 +1,4 @@
-XOTE is a mod developed by FinnRules with art done by FinnRules and RobinFox.
+XOTE is a mod developed by FinnRules with art done by FinnRules and RobinFox. It introduces three new liquids, new decorative items, new consumables including apple cider and vodka, items to modify your player physics, and a number of new ores to mine and items to make with them.
 
 Copyright (C) 2010-2013 FinnRules <finnrules23@gmail.com>
 
@@ -16,7 +16,7 @@ You should have received a copy of the GNU Lesser General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-License for the Follwoing Textures, Models and Sounds
+License for the Following Textures, Models and Sounds
 ---------------------------------------
 CC-BY-SA 3.0 UNPORTED. Created by RobinFox
 

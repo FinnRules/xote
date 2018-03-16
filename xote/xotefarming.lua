@@ -103,6 +103,46 @@ farming.register_plant("xote:hemp", {
 	fertility = {"grassland"},
 	groups = {flammable = 4}
 })
+--Hemp Source Plant
+minetest.register_node("xote:cannabis", {
+    description = "Wild Cannabis",
+    drawtype = "plantlike",
+    waving = 1,
+    tiles = {"xote_cannabis.png"},
+    -- Use texture of a taller grass stage in inventory
+    inventory_image = "xote_cannabis.png",
+    wield_image = "xote_cannabis.png",
+    paramtype = "light",
+    sunlight_propagates = true,
+    walkable = false,
+    buildable_to = true,
+    groups = {snappy = 3, flora = 1, attached_node = 1, grass = 1, flammable = 1},
+    sounds = default.node_sound_leaves_defaults(),
+    selection_box = {
+        type = "fixed",
+        fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, -5 / 16, 6 / 16},
+    },
+	drop = {
+        max_items = 1,
+        items = {
+            {items = {'xote:seed_hemp'}, rarity = 10},
+            {items = {'xote:seed_cannabis'}}
+        }
+    }
+})
+
+--Rope
+minetest.register_craftitem("xote:hemp_rope", {
+		description = "Hemp Rope",
+		inventory_image = "xote_hemp_rope.png"
+})
+--Rope Recipe
+minetest.register_craft({
+		type = "shapeless",
+		output = 'xote:hemp_rope',
+		recipe = {"xote:hemp", "xote:hemp", "xote:hemp"}
+})
+
 --[[Possible uses:
 straps
 bag

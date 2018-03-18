@@ -2,7 +2,7 @@
 minetest.register_node("xote:rope_top", {
 	description = "Rope",
 	drawtype = "nodebox",
---	tiles = {"xote_rope_top.png"},
+	tiles = {"xote_rope_top.png"},
 	inventory_image = "xote_rope_top.png",
 	wield_image = "xote_rope_top.png",
 	paramtype = "light",

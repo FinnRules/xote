@@ -7,3 +7,4 @@ Installation instructions:
 3. Remove file "xote" from extracted files (which should be called xote-master)
 4. Move just the file named "xote" into the "mods" file of Minetest
 5. Configure your world and select xote to add it to your world
+6. Wonder why on earth you wanted to run this garbo mod

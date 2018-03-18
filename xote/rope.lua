@@ -19,9 +19,31 @@ minetest.register_node("xote:rope_top", {
 	},
 	groups = {oddly_breakable_by_hand = 2}
 })
+
+minetest.register_node("xote:rope_middle", {
+	description = "Rope middle",
+	drawtype = "signlike",
+	tiles = {"xote_rope_top.png"},
+	inventory_image = "xote_rope_top.png",
+	wield_image = "xote_rope_top.png",
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	walkable = false,
+	climbable = true,
+	is_ground_content = false,
+	selection_box = {
+		type = "wallmounted",
+		--wall_top = = <default>
+		--wall_bottom = = <default>
+		--wall_side = = <default>
+	},
+	groups = {oddly_breakable_by_hand = 2}
+})
+
 --bottom of rope
 minetest.register_node("xote:rope_bottom", {
-	description = "Rope",
+	description = "Rope bottom",
 	drawtype = "signlike",
 	tiles = {"xote_rope_bottom.png"},
 	inventory_image = "xote_rope_bottom.png",
@@ -42,40 +64,45 @@ minetest.register_node("xote:rope_bottom", {
 })
 --abm to create new rope beneath rope where there is air
 
+
+
 minetest.register_abm({
-    nodenames = {"xote:rope_bottom"},
+    nodenames = {"xote:rope_top"},
     neighbors = {"air"},
-    interval = 1.0,
+    interval = 1, 
+   	chance = 1,
     action = function(pos, node, active_object_count, active_object_count_wider)
-        local under = minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z})
-		if under.name == "air" then
-		minetest.set_node({x = pos.x, y = pos.y - 1, z = pos.z}, {name = "xote:rope_bottom"})
+     if minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z}).name == "air" then
+		 minetest.set_node({x = pos.x, y = pos.y - 1, z = pos.z}, {name = "xote:rope_middle"}) 
+      end
 		end
-    end
 })
---[[
+
 minetest.register_abm({
-    nodenames = {"xote:rope_bottom"},
---    neighbors = {"air"},
-    interval = 1,
-    action = function(pos, node, active_object_count, active_object_count_wider)
-        local under = minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z})
-		if under.name == "air" then
-			minetest.set_node({x = pos.x, y = pos.y - 1, z = pos.z}, {name = "xote:rope_bottom"})
-		end
-    end
-})
-]]--
---[[
-minetest.register_abm({
-    nodenames = {"xote:rope_bottom"},
+    nodenames = {"xote:rope_middle"},
     neighbors = {"air"},
-    interval = .1,
+    interval = 1, 
+   	chance = 1,
     action = function(pos, node, active_object_count, active_object_count_wider)
-        local under = minetest.get_node({x = pos.x, y = pos.y + 1, z = pos.z})
-		if under.name == "air" then
-			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "air"})
+     if minetest.get_node({x = pos.x, y = pos.y + 1, z = pos.z}).name == "xote:rope_top" or   
+     minetest.get_node({x = pos.x, y = pos.y + 1, z = pos.z}).name == "xote:rope_middle" then
+     if minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z}).name == "air" then
+		 minetest.set_node({x = pos.x, y = pos.y - 1, z = pos.z}, {name = "xote:rope_middle"}) 
+      end
 		end
-    end
+   end
 })
-]]--
+
+minetest.register_abm({
+    nodenames = {"xote:rope_middle"},
+    neighbors = {"air"},
+    interval = 1, 
+   	chance = 1,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+     if minetest.get_node({x = pos.x, y = pos.y + 1, z = pos.z}).name ~= "xote:rope_top" or   
+     minetest.get_node({x = pos.x, y = pos.y + 1, z = pos.z}).name ~= "xote:rope_middle" then
+		 minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "air"}) 
+		end
+   end
+})
+

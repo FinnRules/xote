@@ -41,3 +41,41 @@ minetest.register_node("xote:rope_bottom", {
 	groups = {oddly_breakable_by_hand = 2}
 })
 --abm to create new rope beneath rope where there is air
+
+minetest.register_abm({
+    nodenames = {"xote:rope_bottom"},
+    neighbors = {"air"},
+    interval = 1.0,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        local under = minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z})
+		if under.name == "air" then
+		minetest.set_node({x = pos.x, y = pos.y - 1, z = pos.z}, {name = "xote:rope_bottom"})
+		end
+    end
+})
+--[[
+minetest.register_abm({
+    nodenames = {"xote:rope_bottom"},
+--    neighbors = {"air"},
+    interval = 1,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        local under = minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z})
+		if under.name == "air" then
+			minetest.set_node({x = pos.x, y = pos.y - 1, z = pos.z}, {name = "xote:rope_bottom"})
+		end
+    end
+})
+]]--
+--[[
+minetest.register_abm({
+    nodenames = {"xote:rope_bottom"},
+    neighbors = {"air"},
+    interval = .1,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        local under = minetest.get_node({x = pos.x, y = pos.y + 1, z = pos.z})
+		if under.name == "air" then
+			minetest.set_node({x = pos.x, y = pos.y + 1, z = pos.z}, {name = "air"})
+		end
+    end
+})
+]]--

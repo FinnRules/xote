@@ -44,3 +44,10 @@ xote_teosinte.png
 License for all other Textures, Models and Sounds
 ---------------------------------------
 CC-BY-SA 3.0 UNPORTED. Created by FinnRules
+
+Random thanks to:
+veNext
+Aurailus
+RubenWardy
+RobinFox
+and anyone else who helped me or let me bug them about this mod

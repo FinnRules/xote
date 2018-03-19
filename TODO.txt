@@ -1,7 +1,6 @@
 Textures:
 xote_hemp_rope | Generic hemp rope texture
 xote_seed_cannabis | Cannabis seed
-xote_seed_hemp | Hemp seed
 xote_cannabis | Cannabis plant (naturally spawning)
 xote_hemp_1 | first stage
 xote_hemp_2 | second stage

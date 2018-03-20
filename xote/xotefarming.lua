@@ -130,7 +130,7 @@ minetest.register_node("xote:cannabis", {
         }
     }
 })
-
+--[[
 --Rope
 minetest.register_craftitem("xote:hemp_rope", {
 		description = "Hemp Rope",
@@ -142,9 +142,4 @@ minetest.register_craft({
 		output = 'xote:hemp_rope',
 		recipe = {"xote:hemp", "xote:hemp", "xote:hemp"}
 })
-
---[[Possible uses:
-straps
-bag
-rope
 ]]--

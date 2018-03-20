@@ -37,7 +37,7 @@ minetest.register_node("xote:barrel_1", {
 			"xote_barrel_1.png"
 		},
 		description = "Barrel 1/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -56,7 +56,7 @@ minetest.register_node("xote:barrel_2", {
 			"xote_barrel_2.png"
 		},
 		description = "Barrel 2/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -75,7 +75,7 @@ minetest.register_node("xote:barrel_3", {
 			"xote_barrel_3.png"
 		},
 		description = "Barrel 3/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -94,7 +94,7 @@ minetest.register_node("xote:barrel_4", {
 			"xote_barrel_4.png"
 		},
 		description = "Barrel 4/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -113,7 +113,7 @@ minetest.register_node("xote:barrel_5", {
 			"xote_barrel_5.png"
 		},
 		description = "Barrel 5/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -132,7 +132,7 @@ minetest.register_node("xote:barrel_6", {
 			"xote_barrel_6.png"
 		},
 		description = "Barrel 6/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -151,7 +151,7 @@ minetest.register_node("xote:barrel_7", {
 			"xote_barrel_7.png"
 		},
 		description = "Barrel 7/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -262,7 +262,7 @@ minetest.register_node("xote:still_2", {
 			"xote_still_side.png"
 		},
 		description = "Still (2/4 done)",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 --still3
 minetest.register_node("xote:still_3", {
@@ -275,7 +275,7 @@ minetest.register_node("xote:still_3", {
 			"xote_still_side.png"
 		},
 		description = "Still (3/4 done)",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 --still4
 minetest.register_node("xote:still_4", {
@@ -288,7 +288,7 @@ minetest.register_node("xote:still_4", {
 			"xote_still_side.png"
 		},
 		description = "Still (Complete)",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 --abm
 minetest.register_abm({
@@ -315,18 +315,8 @@ minetest.register_abm({
         minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "xote:still_4"})
     end
 })
+
 --booze
---minetest.register_craftitem("xote:beer", {
---		description = "Bottle of beer",
---		inventory_image = "xote_beer.png",
---		groups = {vessel = 1}
---})
---minetest.register_craftitem("xote:vodka", {
---		description = "Bottle of vodka",
---		inventory_image = "xote_vodka.png",
---		groups = {vessel = 1}
---})
---booze redux
 minetest.register_node("xote:beer", {
 	description = "Bottle of Beer",
 	drawtype = "plantlike",
@@ -508,7 +498,7 @@ minetest.register_node("xote:ethanol_source", {
 
     post_effect_color = {a=175, r=244, g=253, b=95},
     -- ^ color of screen when the player is submerged
---	groups = {lflammable = 3},
+    groups = {not_in_creative_inventory=1},
 })
 minetest.register_node("xote:ethanol_flowing", {
 	description = "Flowing Ethanol",
@@ -551,7 +541,7 @@ minetest.register_node("xote:ethanol_flowing", {
 	liquid_alternative_source = "xote:ethanol_source",
 	liquid_viscosity = 4.5,
 	post_effect_color = {a = 175, r = 244, g = 253, b = 95},
---	groups = {lflammable = 3},
+	groups = {not_in_creative_inventory=1},
 })
 bucket.register_liquid(
 	"xote:ethanol_source",
@@ -630,7 +620,7 @@ minetest.register_node("xote:gas_flowing", {
 	liquid_alternative_source = "xote:gas_source",
 	liquid_viscosity = 4.5,
 	post_effect_color = {a = 175, r = 212, g = 206, b = 0},
---	groups = {lflammable = 3},
+	groups = {not_in_creative_inventory=1},
 })
 bucket.register_liquid(
 	"xote:gas_source",
@@ -698,7 +688,7 @@ minetest.register_node("xote:gas_source", {
 
     post_effect_color = {a=178, r=212, g=206, b=0},
     -- ^ color of screen when the player is submerged
---	groups = {lflammable = 3},
+    groups = {not_in_creative_inventory=1},
 })
 --Gas crafting
 minetest.register_craft({
@@ -739,7 +729,7 @@ minetest.register_node("xote:eth_barrel_1", {
 			"xote_eth_barrel_1.png"
 		},
 		description = "Ethanol Barrel 1/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -758,7 +748,7 @@ minetest.register_node("xote:eth_barrel_2", {
 			"xote_eth_barrel_2.png"
 		},
 		description = "Ethanol Barrel 2/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -777,7 +767,7 @@ minetest.register_node("xote:eth_barrel_3", {
 			"xote_eth_barrel_3.png"
 		},
 		description = "Ethanol Barrel 3/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -796,7 +786,7 @@ minetest.register_node("xote:eth_barrel_4", {
 			"xote_eth_barrel_4.png"
 		},
 		description = "Ethanol Barrel 4/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -815,7 +805,7 @@ minetest.register_node("xote:eth_barrel_5", {
 			"xote_eth_barrel_5.png"
 		},
 		description = "Ethanol Barrel 5/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -834,7 +824,7 @@ minetest.register_node("xote:eth_barrel_6", {
 			"xote_eth_barrel_6.png"
 		},
 		description = "Ethanol Barrel 6/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",
@@ -853,7 +843,7 @@ minetest.register_node("xote:eth_barrel_7", {
 			"xote_eth_barrel_7.png"
 		},
 		description = "Ethanol Barrel 7/8 Full",
-		groups = {cracky=2},
+		groups = {cracky=2, not_in_creative_inventory=1},
 })
 minetest.register_craft({
 		type = "shapeless",

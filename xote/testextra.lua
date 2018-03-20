@@ -75,20 +75,6 @@ minetest.register_craft({
 		recipe = {"xote:sugar", "xote:seed_teosinte", "farming:seed_wheat"}
 })
 
---High Powered Lamp
-minetest.register_node("xote:high_powered_lamp", {
-		tiles = {"xote_high_powered_lamp.png"},
-		light_source = 15,
-		groups = {cracky=1},
-		description = "High Powered Lamp",
-})
-
-minetest.register_craft({
-		type = "shapeless",
-		output = 'xote:high_powered_lamp 1',
-		recipe = {"default:gold_ingot", "default:glass", "default:torch"}
-})
-
 --Tile
 minetest.register_craftitem("xote:tile", {
 		description = "Tile",

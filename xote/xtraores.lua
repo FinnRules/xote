@@ -599,6 +599,7 @@ minetest.register_node("xote:oil_source", {
 
 
     post_effect_color = {a=230, r=10, g=10, b=10},
+    groups = {not_in_creative_inventory=1}
 })
 minetest.register_node("xote:oil_flowing", {
 	description = "Flowing Oil",
@@ -641,6 +642,7 @@ minetest.register_node("xote:oil_flowing", {
 	liquid_alternative_source = "xote:oil_source",
 	liquid_viscosity = 4.5,
 	post_effect_color = {a = 230, r = 30, g = 30, b = 30},
+	groups = {not_in_creative_inventory=1}
 })
 --oil bucket
 bucket.register_liquid(

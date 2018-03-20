@@ -85,10 +85,20 @@ minetest.register_abm({
 		end
    end
 })
+--hemp fiber
+minetest.register_craftitem("xote:hemp_fiber", {
+		description = "Hemp Fiber",
+		inventory_image = "xote_hemp_fiber.png"
+})
 
+minetest.register_craft({
+		type = "shapeless",
+		output = 'xote:hemp_fiber',
+		recipe = {"xote:hemp", "xote:hemp", "xote:hemp"}
+})
 --rope crafting
 minetest.register_craft({
 		type = "shapeless",
 		output = 'xote:rope_top',
-		recipe = {"xote:hemp", "xote:hemp", "xote:hemp"}
+		recipe = {"xote:hemp_fiber", "xote:hemp_fiber", "xote:hemp_fiber"}
 })

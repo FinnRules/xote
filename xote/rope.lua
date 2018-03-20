@@ -40,7 +40,7 @@ minetest.register_node("xote:rope_bottom", {
 			{-0.050, -0.5, -0.050, 0.050, 0.5, 0.050},
 		}
 	},
-	groups = {oddly_breakable_by_hand = 2}
+	groups = {oddly_breakable_by_hand = 2, not_in_creative_inventory=1}
 })
 --abm to create new rope beneath rope where there is air
 

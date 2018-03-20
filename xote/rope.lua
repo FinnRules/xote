@@ -85,3 +85,10 @@ minetest.register_abm({
 		end
    end
 })
+
+--rope crafting
+minetest.register_craft({
+		type = "shapeless",
+		output = 'xote:rope_top',
+		recipe = {"xote:hemp", "xote:hemp", "xote:hemp"}
+})

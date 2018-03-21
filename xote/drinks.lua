@@ -74,6 +74,7 @@ minetest.register_node("xote:soda_cola", {
                 })
             end, player)
 })
+]]--
 --orange
 minetest.register_node("xote:soda_orange", {
 	description = "Orange Soda",
@@ -91,15 +92,19 @@ minetest.register_node("xote:soda_orange", {
 	groups = {vessel = 1, dig_immediate = 3, attached_node = 1},
 	sounds = default.node_sound_glass_defaults(),
 	on_use = function(itemstack, player)
-		playerr:set_physics_override({
-                speed= 3.0,
-            	})
-            -- undo after 30 seconds
-            minetest.after(30, function(player)
-                player:set_physics_override({
-                    speed = 1,
-                })
-            end, player)
+		player:set_physics_override({
+    			speed= 3.0,
+		})
+
+		-- undo after 30 seconds
+		minetest.after(30, function(name)
+			local player = minetest.get_player_by_name(name)
+    		if player then
+        		player:set_physics_override({
+            	speed = 1.0,
+        	})
+    	end
+	end, player:get_player_name())
 })
 --[[
 player:set_physics_override({

@@ -47,6 +47,7 @@ minetest.register_craftitem("xote:soda_orange", {
 ]]--
 --redux
 --cola
+--[[
 minetest.register_node("xote:soda_cola", {
 	description = "Cola",
 	drawtype = "plantlike",
@@ -100,3 +101,18 @@ minetest.register_node("xote:soda_orange", {
                 })
             end, player)
 })
+--[[
+player:set_physics_override({
+    gravity= 0.1,
+})
+
+-- undo after 30 seconds
+minetest.after(30, function(name)
+    local player = minetest.get_player_by_name(name)
+    if player then
+        player:set_physics_override({
+            gravity = 1,
+        })
+    end
+end, player:get_player_name())
+]]--

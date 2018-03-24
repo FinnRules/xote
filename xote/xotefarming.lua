@@ -52,7 +52,7 @@ minetest.register_decoration({
 		deco_type = "simple",
 		place_on = {"default:dirt_with_grass"},
 		sidelen = 16,
-		fill_ratio = 0.05,
+		fill_ratio = 0.009,
 		biomes = {"grassland", "grassland_dunes", "deciduous_forest",
 			"coniferous_forest", "coniferous_forest_dunes",
 			"floatland_grassland", "floatland_coniferous_forest"},
@@ -104,14 +104,13 @@ farming.register_plant("xote:hemp", {
 	groups = {flammable = 4}
 })
 --Hemp Source Plant
-minetest.register_node("xote:cannabis", {
-    description = "Wild Cannabis",
+minetest.register_node("xote:supergrass", {
+    description = "Mutated Grass",
     drawtype = "plantlike",
     waving = 1,
-    tiles = {"xote_cannabis.png"},
-    -- Use texture of a taller grass stage in inventory
-    inventory_image = "xote_cannabis.png",
-    wield_image = "xote_cannabis.png",
+    tiles = {"xote_supergrass.png"},
+    inventory_image = "xote_supergrass.png",
+    wield_image = "xote_supergrass.png",
     paramtype = "light",
     sunlight_propagates = true,
     walkable = false,
@@ -126,20 +125,19 @@ minetest.register_node("xote:cannabis", {
         max_items = 1,
         items = {
             {items = {'xote:seed_hemp'}, rarity = 10},
-            {items = {'xote:seed_cannabis'}}
+            {items = {'farming:seed_wheat'}}
         }
     }
 })
---[[
---Rope
-minetest.register_craftitem("xote:hemp_rope", {
-		description = "Hemp Rope",
-		inventory_image = "xote_hemp_rope.png"
+minetest.register_decoration({
+		deco_type = "simple",
+		place_on = {"default:dirt_with_grass"},
+		sidelen = 16,
+		fill_ratio = 0.009,
+		biomes = {"grassland", "grassland_dunes", "deciduous_forest",
+			"coniferous_forest", "coniferous_forest_dunes",
+			"floatland_grassland", "floatland_coniferous_forest"},
+		y_min = 1,
+		y_max = 31000,
+		decoration = "xote:supergrass",
 })
---Rope Recipe
-minetest.register_craft({
-		type = "shapeless",
-		output = 'xote:hemp_rope',
-		recipe = {"xote:hemp", "xote:hemp", "xote:hemp"}
-})
-]]--

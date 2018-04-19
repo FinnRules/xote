@@ -1,3 +1,15 @@
+--[[
+todo
+rework stills to work like furnaces
+include:
+hard cider
+wheat bear
+vodka (include potatoes)
+yeast
+dandelion wine
+etc
+]]--
+
 --barrel
 minetest.register_craft({
 		output = 'xote:barrel',

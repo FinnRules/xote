@@ -108,6 +108,15 @@ minetest.register_craft({
 		}
 })
 
+minetest.register_craft({
+		output = 'xote:rocket_pack',
+		recipe = {
+				{'xote:wire', 'xote:titanium_ingot', 'xote:wire'},
+				{'xote:gas_tank', 'xote:hemp_fiber', 'xote:gas_tank'},
+				{'', 'xote:titanium_ingot', ''},
+		}
+})
+
 --turbo rocket pack
 minetest.register_craftitem("xote:turbo_rocket_pack", {
 		description = "Turbo Rocket Pack (L-Click ON | R-Click OFF)",
@@ -125,10 +134,19 @@ minetest.register_craftitem("xote:turbo_rocket_pack", {
 })
 
 minetest.register_craft({
-		output = 'xote:rocket_pack',
+		output = 'xote:turbo_rocket_pack',
 		recipe = {
 				{'xote:wire', 'xote:violettam_ingot', 'xote:wire'},
 				{'xote:gas_tank', 'farming:cotton', 'xote:gas_tank'},
+				{'xote:gas_tank', 'xote:violettam_ingot', 'xote:gas_tank'},
+		}
+})
+
+minetest.register_craft({
+		output = 'xote:turbo_rocket_pack',
+		recipe = {
+				{'xote:wire', 'xote:violettam_ingot', 'xote:wire'},
+				{'xote:gas_tank', 'xote:hemp_fiber', 'xote:gas_tank'},
 				{'xote:gas_tank', 'xote:violettam_ingot', 'xote:gas_tank'},
 		}
 })

@@ -58,7 +58,7 @@ minetest.register_craft({
 		recipe = {
 			{'', '', ''},
 			{'xote:ramie_wool', 'xote:ramie_wool', 'xote:ramie_wool'},
-			{'default:wood', 'default:wood', 'default:wood'},
+			{'group:wood', 'group:wood', 'groupdefault:wood'},
 		}
 })
 

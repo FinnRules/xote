@@ -1,4 +1,4 @@
-Version 0.8.0 of xote
+Version 0.8.0 of xote (a little bit bugged rn so probably wait for a proper release of 0.9.0)
 
 Installation instructions:
 

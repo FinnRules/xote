@@ -1,3 +1,5 @@
+--drinks.lua is bugged and not meant to be run
+
 --[[
 --cola (gravity)
 minetest.register_craftitem("xote:soda_cola", {
@@ -74,7 +76,7 @@ minetest.register_node("xote:soda_cola", {
                 })
             end, player)
 })
-]]--
+
 --orange
 minetest.register_node("xote:soda_orange", {
 	description = "Orange Soda",
@@ -106,7 +108,7 @@ minetest.register_node("xote:soda_orange", {
     	end
 	end, player:get_player_name())
 })
---[[
+
 player:set_physics_override({
     gravity= 0.1,
 })

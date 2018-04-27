@@ -1,4 +1,0 @@
-Textures:
-xote_hemp_rope | Generic hemp rope texture
-xote_seed_cannabis | Cannabis seed
-xote_cannabis | Cannabis plant (naturally spawning)

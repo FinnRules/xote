@@ -33,3 +33,8 @@ minetest.register_craft({
 		output = "xote:cubic_zirconia",
 })
 
+minetest.register_craft({
+		type = "cooking",
+		recipe = "xote:wolframite_ore",
+		output = "xote:tungsten_ingot",
+})

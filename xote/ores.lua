@@ -122,6 +122,11 @@ minetest.register_ore({
 		y_max = -200,
 })
 
+minetest.register_craftitem("xote:bismuth_lump", {
+		description = "Bismuth Lump",
+		inventory_image = "xote_bismuth_lump.png"
+})
+
 --Wolframite (Tungsten)
 minetest.register_node("xote:wolframite_ore", {
 		tiles = {"default_stone.png^xote_wolframite_ore.png"},

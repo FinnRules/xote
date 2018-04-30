@@ -2,6 +2,7 @@
 Testextra is the original version of the mod
 ]]--
 --Sugar
+--[[
 minetest.register_craftitem("xote:sugar", {
 		description = "Sugar",
 		inventory_image = "xote_sugar.png"
@@ -27,6 +28,7 @@ minetest.register_craft({
 				{'farming:wheat', 'farming:wheat', 'farming:wheat'},
 		}
 })
+--]]
 --Ramie Thread
 minetest.register_craftitem("xote:ramie_thread", {
 		description = "Ramie Thread",
@@ -52,7 +54,7 @@ minetest.register_craft({
 		recipe = {"xote:ramie_thread", "xote:ramie_thread", "xote:ramie_thread", "xote:ramie_thread", "xote:ramie_thread", "xote:ramie_thread", "xote:ramie_thread", "xote:ramie_thread", "xote:ramie_thread"}
 })
 
---New Bed Recipe
+--New Bed Recipe (soon be new bed)
 minetest.register_craft({
 		output = 'beds:bed_bottom 1',
 		recipe = {
@@ -61,7 +63,7 @@ minetest.register_craft({
 			{'group:wood', 'group:wood', 'groupdefault:wood'},
 		}
 })
-
+--[[
 --Trail Mix
 minetest.register_craftitem("xote:trail_mix", {
 		description = "Trail Mix",
@@ -74,7 +76,7 @@ minetest.register_craft({
 		output = 'xote:trail_mix',
 		recipe = {"xote:sugar", "xote:seed_teosinte", "farming:seed_wheat"}
 })
-
+]]--
 --Tile
 minetest.register_craftitem("xote:tile", {
 		description = "Tile",
@@ -662,6 +664,7 @@ minetest.register_craft({
 })
 
 --truffle
+--[[
 minetest.register_node("xote:truffle_ore", {
 		tiles = {"default_dirt.png^xote_truffle_ore.png"},
 		description = "Truffle Dirt",
@@ -685,3 +688,4 @@ minetest.register_craftitem("xote:truffle", {
 		inventory_image = "xote_truffle.png",
 		on_use = minetest.item_eat(3)
 })
+]]--

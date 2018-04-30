@@ -97,7 +97,7 @@ minetest.register_craftitem("xote:opal", {
 		description = "Opal",
 		inventory_image = "xote_opal.png"
 })
-]]--
+
 
 --Amethyst block
 minetest.register_node("xote:lapis_block", {
@@ -136,3 +136,4 @@ minetest.register_craft({
 		recipe = {"xote:amethyst_block"},
 		output = 'xote:amethyst 9', 
 })
+]]--

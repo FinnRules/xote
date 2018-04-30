@@ -1,5 +1,14 @@
 --[[
 Consolidation of ore creation and spawning previously across many documents
+
+Format:
+
+Ore
+
+Ore spawning code
+
+Item from ore (ingot or drop)
+
 ]]--
 
 --Galena (Lead)
@@ -20,6 +29,11 @@ minetest.register_ore({
 		y_max = -50,
 })
 
+minetest.register_craftitem("xote:lead_ingot", {
+		description = "Lead Ingot",
+		inventory_image = "xote_lead_ingot.png",
+})
+
 --Pitchblende (Uranium)
 minetest.register_node("xote:pitchblende_ore", {
 		tiles = {"default_stone.png^xote_pitchblende_ore.png"},
@@ -36,6 +50,11 @@ minetest.register_ore({
 		clust_size = 3,
 		y_min = -31000,
 		y_max = -100,
+})
+
+minetest.register_craftitem("xote:uranium_ingot", {
+		description = "Uranium Ingot",
+		inventory_image = "xote_uranium_ingot.png",
 })
 
 --Sphalerite (Zinc)
@@ -56,6 +75,11 @@ minetest.register_ore({
 		y_max = -50,
 })
 
+minetest.register_craftitem("xote:zinc_ingot", {
+		description = "Zinc Ingot",
+		inventory_image = "xote_zinc_ingot.png",
+})
+
 --Zircon (Zirconium)
 minetest.register_node("xote:zircon_ore", {
 		tiles = {"default_stone.png^xote_zircon_ore.png"},
@@ -72,6 +96,11 @@ minetest.register_ore({
 		clust_size = 3,
 		y_min = -31000,
 		y_max = -150,
+})
+
+minetest.register_craftitem("xote:zirconium_ingot", {
+		description = "Zirconium Ingot",
+		inventory_image = "xote_zirconium_ingot.png",
 })
 
 --Bismuth

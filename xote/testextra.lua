@@ -376,7 +376,7 @@ minetest.register_craft({
 		output = 'xote:light_blue_dye 2',
 		recipe = {'dye:blue', 'dye:white'}
 })
-
+--[[
 --Pitchblende Ore
 minetest.register_node("xote:pitchblende_ore", {
 		tiles = {"default_stone.png^xote_pitchblende_ore.png"},
@@ -412,7 +412,7 @@ minetest.register_ore({
 		y_min = -31000,
 		y_max = -50,
 })
-
+]]--
 --Uranium Ingot
 minetest.register_craftitem("xote:uranium_ingot", {
 		description = "Uranium Ingot",
@@ -486,7 +486,7 @@ minetest.register_craft({
 		recipe = "xote:sphalerite_ore",
 		output = "xote:zinc_ingot",
 })
-
+--[[
 --Sphalerite Ore
 minetest.register_node("xote:sphalerite_ore", {
 		tiles = {"default_stone.png^xote_sphalerite_ore.png"},
@@ -504,7 +504,7 @@ minetest.register_ore({
 		y_min = -31000,
 		y_max = -50,
 })
-
+]]--
 minetest.register_craft({
 		type = "shapeless",
 		recipe = {"xote:zinc_ingot", "default:copper_ingot"},
@@ -539,7 +539,7 @@ minetest.register_craft({
 		recipe = {"default:glass", "default:glass", "default:glass", "xote:lead_ingot"},
 		output = "xote:lead_glass 3",
 })
-
+--[[
 --Zirconium
 minetest.register_node("xote:zircon_ore", {
 		tiles = {"default_stone.png^xote_zircon_ore.png"},
@@ -557,7 +557,7 @@ minetest.register_ore({
 		y_min = -31000,
 		y_max = -150,
 })
-
+]]--
 minetest.register_craft({
 		type = "cooking",
 		recipe = "xote:zircon_ore",

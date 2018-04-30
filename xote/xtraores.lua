@@ -20,7 +20,7 @@ minetest.register_ore({
 		y_min = -31000,
 		y_max = -200,
 })
-]]--
+
 minetest.register_craftitem("xote:bismuth_lump", {
 		description = "Bismuth Lump",
 		inventory_image = "xote_bismuth_lump.png"
@@ -37,7 +37,7 @@ minetest.register_craft({
 		output = 'xote:bismuth_block',
 		recipe = {'xote:bismuth_lump', 'xote:bismuth_lump', 'xote:bismuth_lump', 'xote:bismuth_lump', 'xote:bismuth_lump', 'xote:bismuth_lump', 'xote:bismuth_lump', 'xote:bismuth_lump', 'xote:bismuth_lump'},
 })
---[[	
+	
 --tungsten
 minetest.register_node("xote:wolframite_ore", {
 		tiles = {"default_stone.png^xote_wolframite_ore.png"},
@@ -55,7 +55,6 @@ minetest.register_ore({
 		y_min = -31000,
 		y_max = -500,
 })
-]]--
 minetest.register_craftitem("xote:tungsten_ingot", {
 		description = "Tungsten Ingot",
 		inventory_image = "xote_tungsten_ingot.png"
@@ -84,7 +83,7 @@ minetest.register_craft({
 		recipe = "xote:wolframite_ore",
 		output = "xote:tungsten_ingot",
 })
-
+]]--
 --Tungsten Carbide pick
 minetest.register_tool("xote:tungsten_pick", {
 	description = "Tungsten Carbide Pickaxe",
@@ -378,6 +377,7 @@ minetest.register_ore({
 })
 ]]--
 --Violettam Ingot
+--[[
 minetest.register_craftitem("xote:violettam_ingot", {
 		description = "Violettam Ingot",
 		inventory_image = "xote_violettam_ingot.png"
@@ -388,7 +388,7 @@ minetest.register_craft({
 		recipe = "xote:violettam_ore",
 		output = "xote:violettam_ingot",
 })
-
+]]--
 --Violettam Pickaxe
 minetest.register_tool("xote:violettam_pick", {
 	description = "Violettam Pickaxe",

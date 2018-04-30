@@ -145,6 +145,11 @@ minetest.register_ore({
 		y_max = -500,
 })
 
+minetest.register_craftitem("xote:tungsten_ingot", {
+		description = "Tungsten Ingot",
+		inventory_image = "xote_tungsten_ingot.png"
+})
+
 --Rutile (Titanium)
 minetest.register_node("xote:rutile_ore", {
 		tiles = {"default_stone.png^xote_rutile_ore.png"},
@@ -179,6 +184,11 @@ minetest.register_ore({
 		clust_size = 5,
 		y_min = -31000,
 		y_max = -2300,
+})
+
+minetest.register_craftitem("xote:violettam_ingot", {
+		description = "Violettam Ingot",
+		inventory_image = "xote_violettam_ingot.png"
 })
 
 --Fossil

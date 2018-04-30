@@ -43,3 +43,40 @@ minetest.register_craft({
 		recipe = {'xote:tungsten_block'},
 })
 
+--Lapis
+minetest.register_node("xote:lapis_block", {
+		tiles = {"xote_lapis_block.png"},
+		description = "Lapis Block",
+		groups = {cracky = 2},
+})
+
+minetest.register_craft({
+		type = "shapeless",
+		recipe = {"xote:lapis", "xote:lapis", "xote:lapis", "xote:lapis", "xote:lapis", "xote:lapis", "xote:lapis", "xote:lapis", "xote:lapis"},
+		output = 'xote:lapis_block', 
+})
+
+minetest.register_craft({
+		type = "shapeless",
+		recipe = {"xote:lapis_block"},
+		output = 'xote:lapis 9', 
+})
+
+--Amethyst
+minetest.register_node("xote:amethyst_block", {
+		tiles = {"xote_amethyst_block.png"},
+		description = "Amethyst Block",
+		groups = {cracky = 1},
+})
+
+minetest.register_craft({
+		type = "shapeless",
+		recipe = {"xote:amethyst", "xote:amethyst", "xote:amethyst", "xote:amethyst", "xote:amethyst", "xote:amethyst", "xote:amethyst", "xote:amethyst", "xote:amethyst"},
+		output = 'xote:amethyst_block', 
+})
+
+minetest.register_craft({
+		type = "shapeless",
+		recipe = {"xote:amethyst_block"},
+		output = 'xote:amethyst 9', 
+})

@@ -38,3 +38,12 @@ minetest.register_craft({
 		recipe = "xote:wolframite_ore",
 		output = "xote:tungsten_ingot",
 })
+
+
+
+
+minetest.register_craft({
+		type = "cooking",
+		recipe = "xote:violettam_ore",
+		output = "xote:violettam_ingot",
+})

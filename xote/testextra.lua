@@ -413,18 +413,21 @@ minetest.register_ore({
 		y_max = -50,
 })
 ]]--
+--[[
 --Uranium Ingot
 minetest.register_craftitem("xote:uranium_ingot", {
 		description = "Uranium Ingot",
 		inventory_image = "xote_uranium_ingot.png",
 })
-
+]]--
+--[[
 minetest.register_craft({
 		type = "cooking",
 		recipe = "xote:pitchblende_ore",
 		output = "xote:uranium_ingot",
 })
-
+]]--
+--[[
 --Lead Ingot
 minetest.register_craftitem("xote:lead_ingot", {
 		description = "Lead Ingot",
@@ -436,7 +439,7 @@ minetest.register_craft({
 		recipe = "xote:galena_ore",
 		output = "xote:lead_ingot",
 })
-
+]]--
 --Lead Block
 minetest.register_node("xote:lead_block", {
 		tiles = {"xote_lead_block.png"},
@@ -476,6 +479,7 @@ minetest.register_craft({
 		recipe = {'xote:uranium_block'}
 })
 --Zinc
+--[[
 minetest.register_craftitem("xote:zinc_ingot", {
 		description = "Zinc Ingot",
 		inventory_image = "xote_zinc_ingot.png",
@@ -486,7 +490,7 @@ minetest.register_craft({
 		recipe = "xote:sphalerite_ore",
 		output = "xote:zinc_ingot",
 })
---[[
+
 --Sphalerite Ore
 minetest.register_node("xote:sphalerite_ore", {
 		tiles = {"default_stone.png^xote_sphalerite_ore.png"},
@@ -557,7 +561,7 @@ minetest.register_ore({
 		y_min = -31000,
 		y_max = -150,
 })
-]]--
+
 minetest.register_craft({
 		type = "cooking",
 		recipe = "xote:zircon_ore",
@@ -565,11 +569,12 @@ minetest.register_craft({
 })
 
 --Zirconium
+
 minetest.register_craftitem("xote:zirconium_ingot", {
 		description = "Zirconium Ingot",
 		inventory_image = "xote_zirconium_ingot.png",
 })
-
+]]--
 minetest.register_node("xote:zirconium_block", {
 		tiles = {"xote_zirconium_block.png"},
 		description = "Zirconium Block",
@@ -593,13 +598,13 @@ minetest.register_craftitem("xote:cubic_zirconia", {
 		description = "Cubic Zirconia",
 		inventory_image = "default_diamond.png",
 })
-
+--[[
 minetest.register_craft({
 		type = "cooking",
 		recipe = "xote:zirconium_ingot",
 		output = "xote:cubic_zirconia",
 })
-
+]]--
 --Zinc Block
 minetest.register_node("xote:zinc_block", {
 		tiles = {"xote_zinc_block.png"},

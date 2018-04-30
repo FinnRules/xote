@@ -1,7 +1,7 @@
 --[[
 XOMinerals originally added purely decorational items to the game but now they have some use
 ]]--
-
+--[[
 --Lapis Lazuli
 minetest.register_node("xote:lapis_ore", {
 		tiles = {"default_stone.png^xote_lapis_ore.png"},
@@ -97,6 +97,7 @@ minetest.register_craftitem("xote:opal", {
 		description = "Opal",
 		inventory_image = "xote_opal.png"
 })
+]]--
 
 --Amethyst block
 minetest.register_node("xote:lapis_block", {
